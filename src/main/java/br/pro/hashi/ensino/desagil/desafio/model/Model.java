@@ -26,6 +26,13 @@ public class Model {
 
     public void setWinner(Player winner) {
         this.winner = winner;
+
+        if (winner == humanPlayer){
+            cpuPlayer.setDoMove(false);
+        }
+        else{
+            humanPlayer.setDoMove(false);
+        }
     }
 
     public Board getBoard() {
